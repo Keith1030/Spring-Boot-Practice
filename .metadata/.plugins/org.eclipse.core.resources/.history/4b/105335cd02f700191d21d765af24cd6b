@@ -1,0 +1,3 @@
+#spring.thymeleaf.template-loader-path: classpath:/templates
+#spring.thymeleaf.suffix: .html
+prod.base.url=http://localhost:8083/prod

@@ -1,0 +1,21 @@
+<th:block th:fragment="productTable">	
+	<table id="customerTable" class="table">
+		<thead>
+			<tr>
+				<th>Product Id</th>
+				<th>Code</th>
+				<th>Name</th>
+				<th>Unitprice</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod, rowStat: ${product}"
+				th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+				<td th:text="${rowStat.productId}"></td>
+				<td th:text="${prod.code}"></td>
+				<td th:text="${prod.name}"></td>
+				<td th:text="${prod.unitprice}"></td>
+			</tr>
+		</tbody>
+	</table>
+</th:block>

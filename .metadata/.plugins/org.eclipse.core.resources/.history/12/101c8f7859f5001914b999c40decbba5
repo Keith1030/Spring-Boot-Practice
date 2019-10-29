@@ -1,0 +1,10 @@
+package com.example.demo.dto;
+
+public class CustomerResponseBody {
+	public String customerId;
+	public String name;
+	public String age;
+	public String tel;
+	public String addr;
+
+}

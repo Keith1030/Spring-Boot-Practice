@@ -1,0 +1,24 @@
+package com.example.demo.Controller;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.demo.vo.Product;
+
+@Controller
+public class ProductController {
+
+   
+	@GetMapping("/prod")
+	public String prod(Model model) {
+        model.addAttribute("text", "This is a page A");
+        List<Product> productList = productService.getProductAll();
+        model.addAttribute("productList", productList);
+		return "product";
+	}
+}

@@ -1,0 +1,8 @@
+package com.example.demo.dto.ProductList;
+
+import java.util.ArrayList;
+import com.example.demo.entity.Product;
+
+public class ProductListResponseBody {
+	public ArrayList<Product> prdouctList;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    h2: <h2 th:text="${text}"></h2>
+    <br>
+    <h1 th:text="${name}"></h1>
+    <br>
+    th:block:[<th:block th:text=${name}></th:block>]
+    <br>
+    <input type="text" value="${text}"/>
+    <input type="text" th:value="${text}"/>
+</body>
+</html>

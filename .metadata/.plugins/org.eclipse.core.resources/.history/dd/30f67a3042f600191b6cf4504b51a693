@@ -1,0 +1,8 @@
+package com.example.demo.dto.ProductList;
+
+import com.example.demo.dto.ProductHeader;
+
+public class ProductListResponse {
+	public ProductHeader header;
+	public ProductListBody body;
+}

@@ -1,0 +1,13 @@
+package com.example.demo.Controller;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class Page_A_Controller {
+	@GetMapping("/prod")
+	public String prod(Model model) {
+        model.addAttribute("text", "This is a page A");
+        model.addAttribute("product", "B");
+		return "a";
+	}
+}

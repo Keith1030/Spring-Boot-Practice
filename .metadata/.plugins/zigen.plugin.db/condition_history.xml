@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_222" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>jdbc:h2:tcp://localhost/~/test.PUBLIC.CUSTOMER_NEW</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList">
+      <void method="add">
+       <string></string>
+      </void>
+     </object>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:h2:tcp://localhost/~/test</string>
+    </void>
+    <void property="schema">
+     <string>PUBLIC</string>
+    </void>
+    <void property="table">
+     <string>CUSTOMER_NEW</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:h2:tcp://localhost/~/test.PUBLIC.CUSTOMER</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:h2:tcp://localhost/~/test</string>
+    </void>
+    <void property="schema">
+     <string>PUBLIC</string>
+    </void>
+    <void property="table">
+     <string>CUSTOMER</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:h2:tcp://localhost/~/test.PUBLIC.CUSTOMERID</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:h2:tcp://localhost/~/test</string>
+    </void>
+    <void property="schema">
+     <string>PUBLIC</string>
+    </void>
+    <void property="table">
+     <string>CUSTOMERID</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:h2:tcp://localhost/~/test.PUBLIC.PRODUCT</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:h2:tcp://localhost/~/test</string>
+    </void>
+    <void property="schema">
+     <string>PUBLIC</string>
+    </void>
+    <void property="table">
+     <string>PRODUCT</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

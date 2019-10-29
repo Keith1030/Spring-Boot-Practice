@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2 th:text="${text}"/></h2>
+    productId:<th:block th:text=${product.getProductId()}></th:block><br/>
+    code<th:block th:text=${product.getCode()}></th:block><br/>
+    name<th:block th:text=${product.getName()}></th:block><br/>
+    unitprice<th:block th:text=${product.getUnitprice()}></th:block><br/>
+</body>
+</html>

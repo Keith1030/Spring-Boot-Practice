@@ -1,0 +1,47 @@
+package com.example.demo.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.dto.ProductHeader;
+import com.example.demo.dto.ProductRequest;
+import com.example.demo.dto.ProductRequestBody;
+import com.example.demo.dto.ProductResponse;
+import com.example.demo.entity.Product;
+import com.example.demo.service.ProductService;
+import com.example.demo.vo.Page;
+
+@Controller
+public class Page_B_Controller {
+	
+	@Autowired
+	public ProductService productService;
+	
+//	@PostMapping("/b/query")
+//	public String query(Model model, @RequestParam("pageName") String pageName) {
+//		System.err.print("123");
+//        model.addAttribute("text", "This is a page B");
+//        model.addAttribute("pageName", pageName);
+//		return "b";
+//	}
+	@PostMapping("/b/query")
+	public String query(Model model, @RequestParam("productId") Integer productId) {
+		System.err.print(productId);
+		//假request
+		ProductRequest request = new ProductRequest();
+		ProductHeader requestHeader = new ProductHeader();
+		ProductRequestBody requestBody = new ProductRequestBody();
+		requestBody.setProductId(productId);
+		request.setHeader(requestHeader);
+		request.setBody(requestBody);
+		//取得資料
+		Product product = productService.getProduct(request);
+        model.addAttribute("text", "This is a product page");
+        System.out.println(product.getName());
+        model.addAttribute("product", product);
+		return "b";
+	}
+}

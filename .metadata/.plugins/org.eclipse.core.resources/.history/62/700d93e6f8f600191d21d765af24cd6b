@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2 th:value="${text}"/></h2>
+    <form method="post" th:action="@{/b/query}">
+    	頁面名稱:<input type="text" id="pageName" name="pageName" valu=""/>
+    </form>
+</body>
+</html>

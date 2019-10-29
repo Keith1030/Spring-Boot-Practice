@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+	<script th:src="@{/js/jquery.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+    <h2 th:text="${text}"/></h2>
+    <table id="productTable" class="table">
+    	<tr>
+    		<td>productId</td>
+    		<td><th:block th:text=${product.getProductId()}></th:block></td>
+    	</tr>
+    	<tr>
+    		<td>code</td>
+    		<td><th:block th:text=${product.getCode()}></th:block></td>
+    	</tr>
+    	<tr>
+    		<td>name</td>
+    		<td><th:block th:text=${product.getName()}></th:block></td>
+    	</tr>
+    	<tr>
+    		<td>unitprice</td>
+    		<td><th:block th:text=${product.getUnitprice()}></th:block></td>
+    	</tr>
+    </table>
+</body>
+</html>

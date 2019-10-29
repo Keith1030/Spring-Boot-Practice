@@ -1,0 +1,7 @@
+package com.example.demo.dto.ProductList;
+
+import antlr.collections.List;
+
+public class ProductListBody {
+	public List<Product> productList;
+}

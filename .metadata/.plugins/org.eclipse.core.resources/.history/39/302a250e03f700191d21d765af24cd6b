@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2 th:text="${text}"/></h2>
+    
+    code
+    name
+    unitprice
+</body>
+</html>

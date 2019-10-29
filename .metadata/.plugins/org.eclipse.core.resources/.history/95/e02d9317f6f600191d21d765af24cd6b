@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Product Table Example</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+	<script th:src="@{/js/jquery.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 th:text="${text}"></h1>
+		<div class="row col-md-7 table-responsive">
+			<table id="customerTable" class="table">
+				<thead>
+					<tr>
+						<th>Product Id</th>
+						<th>Code</th>
+						<th>Name</th>
+						<th>Unitprice</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="prod, rowStat: ${product}"
+						th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+						<td th:text="${prod,.productId}"></td>
+						<td th:text="${prod.code}"></td>
+						<td th:text="${prod.name}"></td>
+						<td th:text="${prod.unitprice}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+package com.example.demo.service.impl;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.dto.ProductRequest;
+import com.example.demo.dto.ProductResponse;
+import com.example.demo.dto.ProductRequest;
+import com.example.demo.entity.Product;
+import com.example.demo.service.ProductService;
+
+import java.util.List;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+	
+//	@Autowired
+//	public ProductRespository productRespository;
+
+
+	@Override
+	public ProductResponse getProduct(@RequestBody ProductRequest request) {
+		// TODO Auto-generated method stub
+		return new RestTemplate().postForObject("prodBaseUrl", request, ProductResponse.class);
+	}
+
+
+//	@Override
+//	public List<Product> getProductAll() {
+//		// TODO Auto-generated method stub
+//		return productRespository.findAll();
+//	}
+
+}

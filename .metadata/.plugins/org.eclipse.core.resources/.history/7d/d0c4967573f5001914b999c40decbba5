@@ -1,0 +1,9 @@
+package com.example.demo.dto;
+
+public class ProductHeader {
+	public String msgId;
+	public String txnSeq;
+	public String branchId;
+	public String clientIp;
+
+}
